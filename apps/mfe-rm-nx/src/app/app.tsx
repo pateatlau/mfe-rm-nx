@@ -1,12 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
+import Home from './home';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="mfe-rm-nx" />
+      <Home title="mfe-rm-nx" />
     </div>
   );
 }

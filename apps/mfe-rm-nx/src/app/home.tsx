@@ -11,9 +11,9 @@ export function Home({ title }: { title: string }) {
       <div className="container">
         <div id="welcome">
           <h1>
-            <span> Hello there, </span>
-            Welcome {title} 👋
+            Welcome to {title}!
           </h1>
+          <h2>Micro Frontends in Monorepo using Nx Integrated-style repo.</h2>
         </div>
       </div>
     </div>

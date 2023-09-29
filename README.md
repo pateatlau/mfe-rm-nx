@@ -18,7 +18,7 @@ mfe-rm-nx
 Run `npm i --global nx@latest`. It is recommended to install it globally as we can then directly run it directly, eg. `nx serve cards` instead of having to use NPX with every command if it is installed locally, eg. `npx nx serve cards`.
 
 ## Installing NPM packages
-Navigate into the root repo folder (mfe-rm-nx) and run `npm i`. That's it -- no need to go all the different sub-folders (projects) and install the packages separately. All the NPM packages are installed in the project root only. Once the NPM packages are installed, you are good to go!
+Navigate to the root repo folder (mfe-rm-nx) and run `npm i`. That's it! No need to install the NPM packages to all the different sub-folders (projects) separately. All the NPM packages are installed in the project root only. Once the NPM packages are installed with this single command, you are good to go!
 
 ## Start the app in local
 - To start the Cards Remote MFE development server run `nx serve cards`. Open your browser and navigate to http://localhost:4500/.

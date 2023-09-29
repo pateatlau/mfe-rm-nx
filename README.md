@@ -23,7 +23,7 @@ Navigate into the root repo folder (mfe-rm-nx) and run `npm i`. That's it -- no 
 ## Start the app in local
 - To start the Cards Remote MFE development server run `nx serve cards`. Open your browser and navigate to http://localhost:4500/.
 - To start the Casa Remote MFE development server run `nx serve casa`. Open your browser and navigate to http://localhost:4600/.
-- To start the Host Container MFE development server run `nx serve host-container`. Open your browser and navigate to http://localhost:4300/.
+- To start the Host Container MFE development server with hot reload, run `nx serve host-container devRemotes=cards, casa`. Open your browser and navigate to http://localhost:4300/. (NOTE: `nx serve host-container` runs without hot reload when changes are made to the remote MFE's)
 
 ## Linting
 - To lint Cards: `nx lint cards`
@@ -43,8 +43,12 @@ Navigate into the root repo folder (mfe-rm-nx) and run `npm i`. That's it -- no 
 - To build Cards: `nx build cards`. It will generate output in dist/apps/cards.
 - To build Casa: `nx build casa`. It will generate output in dist/apps/casa.
 - To build Host Container: `nx build host-container`. It will generate output in dist/apps/host-container.
+- To build utils: `nx build utils`. It will generate output in dist/libs/utils.
+- To build shared-ui-components: `nx build shared-ui-components`. It will generate output in dist/libs/shared-ui-components.
 
-Note: Utils & shared-ui-components need not be built as they are libraries & not apps.
+Notes: 
+- Utils & shared-ui-components need not be built as they are libraries & not apps.
+- shared-ui-components use `vite` as build tool, instead of `webpack`.
 
 ## Project dependency graph
 `nx dep-graph`. It will open the graph in the browser at http://127.0.0.1:4211/projects. Click at "Show all projects" in the left panel to view the graph.

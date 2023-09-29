@@ -1,5 +1,6 @@
 import Casa from 'casa/Module';
 import Cards from 'cards/Module';
+// import Loans from 'loans-angular/Module';
 
 export function App() {
   return (
@@ -7,6 +8,7 @@ export function App() {
       <h1>Micro Frontend Host Container</h1>
       <Casa />
       <Cards />
+      {/* <Loans /> */}
     </div>
   );
 }

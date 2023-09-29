@@ -4,3 +4,5 @@
 declare module 'cards/Module';
 
 declare module 'casa/Module';
+
+declare module 'loans-angular/Module';

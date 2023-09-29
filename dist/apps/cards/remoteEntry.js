@@ -402,8 +402,8 @@ __webpack_require__.d(exports, {
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
 /******/ 		"webpack/sharing/consume/default/react/react": () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__("../../node_modules/react/index.js"))))))),
-/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/shared-ui-components", [4,0,0,1], () => (__webpack_require__.e("libs_shared-ui-components_src_index_ts-_ec530").then(() => (() => (__webpack_require__("../../libs/shared-ui-components/src/index.ts"))))))),
-/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/utils", [4,0,0,1], () => (__webpack_require__.e("libs_utils_src_index_ts").then(() => (() => (__webpack_require__("../../libs/utils/src/index.ts")))))))
+/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/utils", [4,0,0,1], () => (__webpack_require__.e("libs_utils_src_index_ts").then(() => (() => (__webpack_require__("../../libs/utils/src/index.ts"))))))),
+/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/shared-ui-components", [4,0,0,1], () => (__webpack_require__.e("libs_shared-ui-components_src_index_ts-_ec530").then(() => (() => (__webpack_require__("../../libs/shared-ui-components/src/index.ts")))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
@@ -411,8 +411,8 @@ __webpack_require__.d(exports, {
 /******/ 			"webpack/sharing/consume/default/react/react"
 /******/ 		],
 /******/ 		"webpack_sharing_consume_default_mfe-rm-nx_shared-ui-components_mfe-rm-nx_shared-ui-components-1b5de6": [
-/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components",
-/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils"
+/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils",
+/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components"
 /******/ 		]
 /******/ 	};
 /******/ 	__webpack_require__.f.consumes = (chunkId, promises) => {

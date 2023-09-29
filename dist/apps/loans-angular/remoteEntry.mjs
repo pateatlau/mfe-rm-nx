@@ -1,30 +1,42 @@
-import * as __WEBPACK_EXTERNAL_MODULE_http_localhost_4500_remoteEntry_js_a8149b97__ from "http://localhost:4500/remoteEntry.js";
-import * as __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b8500e6__ from "http://localhost:4600/remoteEntry.js";
-import * as __WEBPACK_EXTERNAL_MODULE_http_localhost_4700_remoteEntry_js_8b8500e6__ from "http://localhost:4700/remoteEntry.js";
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/main.ts":
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 646:
+/*!***********************!*\
+  !*** container entry ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react-dom_client_js-node_modules_react_jsx-dev-runtime_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_bootstrap_tsx-webpack_sharing_consume_default_react-dom_react-dom")]).then(__webpack_require__.bind(__webpack_require__, "./src/bootstrap.tsx"));
+var moduleMap = {
+	"./Module": () => {
+		return Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-apps_loans-angular_src_app_remote-entry_entry_module_ts"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_router_angular_router")]).then(() => (() => ((__webpack_require__(/*! apps/loans-angular/src/app/remote-entry/entry.module.ts */ 5806)))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope) => {
+	if (!__webpack_require__.S) return;
+	var name = "default"
+	var oldScope = __webpack_require__.S[name];
+	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
+	__webpack_require__.S[name] = shareScope;
+	return __webpack_require__.I(name, initScope);
+};
 
-/***/ }),
-
-/***/ "webpack/container/reference/cards":
-/***/ ((module) => {
-
-var x = y => { var x = {}; __webpack_require__.d(x, y); return x; }
-var y = x => () => x
-module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4500_remoteEntry_js_a8149b97__;
-
-/***/ }),
-
-/***/ "webpack/container/reference/casa":
-/***/ ((module) => {
-
-var x = y => { var x = {}; __webpack_require__.d(x, y); return x; }
-var y = x => () => x
-module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b8500e6__;
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
 
 /***/ })
 
@@ -42,16 +54,13 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
 /******/ 	var module = __webpack_module_cache__[moduleId] = {
-/******/ 		id: moduleId,
-/******/ 		loaded: false,
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
 /******/ 		exports: {}
 /******/ 	};
 /******/ 
 /******/ 	// Execute the module function
 /******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 
-/******/ 	// Flag the module as loaded
-/******/ 	module.loaded = true;
 /******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
@@ -127,7 +136,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "host-container:";
+/******/ 	var dataWebpackPrefix = "loans-angular:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -150,7 +159,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 			}
 /******/ 			script.setAttribute("data-webpack", dataWebpackPrefix + key);
 /******/ 	
-/******/ 			script.src = url;
+/******/ 			script.src = __webpack_require__.tu(url);
 /******/ 		}
 /******/ 		inProgress[url] = [done];
 /******/ 		var onScriptComplete = (prev, event) => {
@@ -181,80 +190,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 	};
 /******/ })();
 /******/ 
-/******/ /* webpack/runtime/node module decorator */
-/******/ (() => {
-/******/ 	__webpack_require__.nmd = (module) => {
-/******/ 		module.paths = [];
-/******/ 		if (!module.children) module.children = [];
-/******/ 		return module;
-/******/ 	};
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/remotes loading */
-/******/ (() => {
-/******/ 	var chunkMapping = {
-/******/ 		"src_bootstrap_tsx-webpack_sharing_consume_default_react-dom_react-dom": [
-/******/ 			"webpack/container/remote/casa/Module",
-/******/ 			"webpack/container/remote/cards/Module"
-/******/ 		]
-/******/ 	};
-/******/ 	var idToExternalAndNameMapping = {
-/******/ 		"webpack/container/remote/casa/Module": [
-/******/ 			"default",
-/******/ 			"./Module",
-/******/ 			"webpack/container/reference/casa"
-/******/ 		],
-/******/ 		"webpack/container/remote/cards/Module": [
-/******/ 			"default",
-/******/ 			"./Module",
-/******/ 			"webpack/container/reference/cards"
-/******/ 		]
-/******/ 	};
-/******/ 	__webpack_require__.f.remotes = (chunkId, promises) => {
-/******/ 		if(__webpack_require__.o(chunkMapping, chunkId)) {
-/******/ 			chunkMapping[chunkId].forEach((id) => {
-/******/ 				var getScope = __webpack_require__.R;
-/******/ 				if(!getScope) getScope = [];
-/******/ 				var data = idToExternalAndNameMapping[id];
-/******/ 				if(getScope.indexOf(data) >= 0) return;
-/******/ 				getScope.push(data);
-/******/ 				if(data.p) return promises.push(data.p);
-/******/ 				var onError = (error) => {
-/******/ 					if(!error) error = new Error("Container missing");
-/******/ 					if(typeof error.message === "string")
-/******/ 						error.message += '\nwhile loading "' + data[1] + '" from ' + data[2];
-/******/ 					__webpack_require__.m[id] = () => {
-/******/ 						throw error;
-/******/ 					}
-/******/ 					data.p = 0;
-/******/ 				};
-/******/ 				var handleFunction = (fn, arg1, arg2, d, next, first) => {
-/******/ 					try {
-/******/ 						var promise = fn(arg1, arg2);
-/******/ 						if(promise && promise.then) {
-/******/ 							var p = promise.then((result) => (next(result, d)), onError);
-/******/ 							if(first) promises.push(data.p = p); else return p;
-/******/ 						} else {
-/******/ 							return next(promise, d, first);
-/******/ 						}
-/******/ 					} catch(error) {
-/******/ 						onError(error);
-/******/ 					}
-/******/ 				}
-/******/ 				var onExternal = (external, _, first) => (external ? handleFunction(__webpack_require__.I, data[0], 0, external, onInitialized, first) : onError());
-/******/ 				var onInitialized = (_, external, first) => (handleFunction(external.get, data[1], getScope, 0, onFactory, first));
-/******/ 				var onFactory = (factory) => {
-/******/ 					data.p = 1;
-/******/ 					__webpack_require__.m[id] = (module) => {
-/******/ 						module.exports = factory();
-/******/ 					}
-/******/ 				};
-/******/ 				handleFunction(__webpack_require__, data[2], 0, 0, onExternal, 1);
-/******/ 			});
-/******/ 		}
-/******/ 	}
-/******/ })();
-/******/ 
 /******/ /* webpack/runtime/sharing */
 /******/ (() => {
 /******/ 	__webpack_require__.S = {};
@@ -276,7 +211,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 		var warn = (msg) => {
 /******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
-/******/ 		var uniqueName = "host-container";
+/******/ 		var uniqueName = "loans-angular";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -296,17 +231,39 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
-/******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__("../../node_modules/react-dom/index.js"))))));
-/******/ 				register("react-router-dom", "6.11.2", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-router-dom_dist_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__("../../node_modules/react-router-dom/dist/index.js"))))));
-/******/ 				register("react", "18.2.0", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__("../../node_modules/react/index.js"))))));
-/******/ 				initExternal("webpack/container/reference/cards");
-/******/ 				initExternal("webpack/container/reference/casa");
+/******/ 				register("@angular/common/http", "16.2.7", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_http_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/common/fesm2022/http.mjs */ 7202))))));
+/******/ 				register("@angular/common", "16.2.7", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_common_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/common/fesm2022/common.mjs */ 4849))))));
+/******/ 				register("@angular/core", "16.2.7", () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("node_modules_angular_core_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/core/fesm2022/core.mjs */ 9058))))));
+/******/ 				register("@angular/platform-browser", "16.2.7", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs */ 2454))))));
+/******/ 				register("@angular/router", "16.2.7", () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_core_angular_core"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! ./node_modules/@angular/router/fesm2022/router.mjs */ 2541))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
 /******/ 		if(!promises.length) return initPromises[name] = 1;
 /******/ 		return initPromises[name] = Promise.all(promises).then(() => (initPromises[name] = 1));
 /******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/trusted types policy */
+/******/ (() => {
+/******/ 	var policy;
+/******/ 	__webpack_require__.tt = () => {
+/******/ 		// Create Trusted Type policy if Trusted Types are available and the policy doesn't exist yet.
+/******/ 		if (policy === undefined) {
+/******/ 			policy = {
+/******/ 				createScriptURL: (url) => (url)
+/******/ 			};
+/******/ 			if (typeof trustedTypes !== "undefined" && trustedTypes.createPolicy) {
+/******/ 				policy = trustedTypes.createPolicy("angular#bundler", policy);
+/******/ 			}
+/******/ 		}
+/******/ 		return policy;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/trusted types script url */
+/******/ (() => {
+/******/ 	__webpack_require__.tu = (url) => (__webpack_require__.tt().createScriptURL(url));
 /******/ })();
 /******/ 
 /******/ /* webpack/runtime/publicPath */
@@ -458,18 +415,28 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 	});
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
-/******/ 		"webpack/sharing/consume/default/react/react": () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__("../../node_modules/react/index.js"))))))),
-/******/ 		"webpack/sharing/consume/default/react-dom/react-dom": () => (loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react-dom_index_js").then(() => (() => (__webpack_require__("../../node_modules/react-dom/index.js"))))))),
-/******/ 		"webpack/sharing/consume/default/react-router-dom/react-router-dom": () => (loadStrictSingletonVersionCheckFallback("default", "react-router-dom", [4,6,11,2], () => (__webpack_require__.e("vendors-node_modules_react-router-dom_dist_index_js").then(() => (() => (__webpack_require__("../../node_modules/react-router-dom/dist/index.js")))))))
+/******/ 		4817: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/common", [2,16,2,0], () => (__webpack_require__.e("default-node_modules_angular_common_fesm2022_common_mjs").then(() => (() => (__webpack_require__(/*! @angular/common */ 4849))))))),
+/******/ 		6151: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/core", [2,16,2,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("node_modules_angular_core_fesm2022_core_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/core */ 9058))))))),
+/******/ 		202: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/router", [2,16,2,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser"), __webpack_require__.e("default-node_modules_angular_router_fesm2022_router_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/router */ 2541))))))),
+/******/ 		6564: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/common/http", [2,16,2,0], () => (Promise.all([__webpack_require__.e("default-node_modules_rxjs_dist_esm_internal_observable_of_js-node_modules_rxjs_dist_esm_inter-4217e3"), __webpack_require__.e("default-node_modules_angular_common_fesm2022_http_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/common/http */ 7202))))))),
+/******/ 		2478: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/platform-browser", [2,16,2,0], () => (Promise.all([__webpack_require__.e("default-webpack_sharing_consume_default_angular_common_angular_common"), __webpack_require__.e("default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs")]).then(() => (() => (__webpack_require__(/*! @angular/platform-browser */ 2454)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"webpack_sharing_consume_default_react_react": [
-/******/ 			"webpack/sharing/consume/default/react/react"
+/******/ 		"default-webpack_sharing_consume_default_angular_common_angular_common": [
+/******/ 			4817
 /******/ 		],
-/******/ 		"src_bootstrap_tsx-webpack_sharing_consume_default_react-dom_react-dom": [
-/******/ 			"webpack/sharing/consume/default/react-dom/react-dom",
-/******/ 			"webpack/sharing/consume/default/react-router-dom/react-router-dom"
+/******/ 		"default-webpack_sharing_consume_default_angular_core_angular_core": [
+/******/ 			6151
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_router_angular_router": [
+/******/ 			202
+/******/ 		],
+/******/ 		"default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs": [
+/******/ 			6564
+/******/ 		],
+/******/ 		"default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser": [
+/******/ 			2478
 /******/ 		]
 /******/ 	};
 /******/ 	__webpack_require__.f.consumes = (chunkId, promises) => {
@@ -509,7 +476,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"main": 0
+/******/ 		"loans-angular": 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -521,7 +488,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if("webpack_sharing_consume_default_react_react" != chunkId) {
+/******/ 					if(!/^default\-webpack_sharing_consume_default_angular_(co(mmon_angular_common|re_angular_core)|(platform\-browser_angular_platform\-brows|router_angular_rout)er)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -586,7 +553,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkhost_container"] = self["webpackChunkhost_container"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkloans_angular"] = self["webpackChunkloans_angular"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -596,7 +563,10 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_http_localhost_4600_remoteEntry_js_8b
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__("./src/main.ts");
+/******/ var __webpack_exports__ = __webpack_require__(646);
+/******/ var __webpack_exports__get = __webpack_exports__.get;
+/******/ var __webpack_exports__init = __webpack_exports__.init;
+/******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
 /******/ 
 
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=remoteEntry.mjs.map

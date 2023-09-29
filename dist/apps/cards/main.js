@@ -3,7 +3,7 @@
 /***/ "./src/main.ts":
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx-dev-runtime_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_app_app_tsx"), __webpack_require__.e("src_bootstrap_tsx")]).then(__webpack_require__.bind(__webpack_require__, "./src/bootstrap.tsx"));
+Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx-dev-runtime_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_mfe-rm-nx_shared-ui-components_mfe-rm-nx_shared-ui-components-1b5de6"), __webpack_require__.e("src_bootstrap_tsx")]).then(__webpack_require__.bind(__webpack_require__, "./src/bootstrap.tsx"));
 
 /***/ })
 
@@ -94,7 +94,7 @@ Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.miniCssF = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return undefined;
+/******/ 		return "" + chunkId + ".css";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -210,6 +210,8 @@ Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
+/******/ 				register("@mfe-rm-nx/shared-ui-components", "0.0.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react_jsx-dev-runtime_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("libs_shared-ui-components_src_index_ts-_ec531")]).then(() => (() => (__webpack_require__("../../libs/shared-ui-components/src/index.ts"))))));
+/******/ 				register("@mfe-rm-nx/utils", "0.0.1", () => (__webpack_require__.e("libs_utils_src_index_ts").then(() => (() => (__webpack_require__("../../libs/utils/src/index.ts"))))));
 /******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__("../../node_modules/react-dom/index.js"))))));
 /******/ 				register("react", "18.2.0", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__("../../node_modules/react/index.js"))))));
 /******/ 			}
@@ -370,12 +372,18 @@ Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
 /******/ 		"webpack/sharing/consume/default/react/react": () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__("../../node_modules/react/index.js"))))))),
+/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/shared-ui-components", [4,0,0,1], () => (__webpack_require__.e("libs_shared-ui-components_src_index_ts-_ec530").then(() => (() => (__webpack_require__("../../libs/shared-ui-components/src/index.ts"))))))),
+/******/ 		"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils": () => (loadSingletonVersionCheckFallback("default", "@mfe-rm-nx/utils", [4,0,0,1], () => (__webpack_require__.e("libs_utils_src_index_ts").then(() => (() => (__webpack_require__("../../libs/utils/src/index.ts"))))))),
 /******/ 		"webpack/sharing/consume/default/react-dom/react-dom": () => (loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react-dom_index_js").then(() => (() => (__webpack_require__("../../node_modules/react-dom/index.js")))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
 /******/ 		"webpack_sharing_consume_default_react_react": [
 /******/ 			"webpack/sharing/consume/default/react/react"
+/******/ 		],
+/******/ 		"webpack_sharing_consume_default_mfe-rm-nx_shared-ui-components_mfe-rm-nx_shared-ui-components-1b5de6": [
+/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/shared-ui-components/@mfe-rm-nx/shared-ui-components",
+/******/ 			"webpack/sharing/consume/default/@mfe-rm-nx/utils/@mfe-rm-nx/utils"
 /******/ 		],
 /******/ 		"src_bootstrap_tsx": [
 /******/ 			"webpack/sharing/consume/default/react-dom/react-dom"
@@ -410,6 +418,78 @@ Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx
 /******/ 	}
 /******/ })();
 /******/ 
+/******/ /* webpack/runtime/css loading */
+/******/ (() => {
+/******/ 	var createStylesheet = (chunkId, fullhref, resolve, reject) => {
+/******/ 		var linkTag = document.createElement("link");
+/******/ 	
+/******/ 		linkTag.rel = "stylesheet";
+/******/ 		linkTag.type = "text/css";
+/******/ 		var onLinkComplete = (event) => {
+/******/ 			// avoid mem leaks.
+/******/ 			linkTag.onerror = linkTag.onload = null;
+/******/ 			if (event.type === 'load') {
+/******/ 				resolve();
+/******/ 			} else {
+/******/ 				var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 				var realHref = event && event.target && event.target.href || fullhref;
+/******/ 				var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + realHref + ")");
+/******/ 				err.code = "CSS_CHUNK_LOAD_FAILED";
+/******/ 				err.type = errorType;
+/******/ 				err.request = realHref;
+/******/ 				linkTag.parentNode.removeChild(linkTag)
+/******/ 				reject(err);
+/******/ 			}
+/******/ 		}
+/******/ 		linkTag.onerror = linkTag.onload = onLinkComplete;
+/******/ 		linkTag.href = fullhref;
+/******/ 	
+/******/ 		document.head.appendChild(linkTag);
+/******/ 		return linkTag;
+/******/ 	};
+/******/ 	var findStylesheet = (href, fullhref) => {
+/******/ 		var existingLinkTags = document.getElementsByTagName("link");
+/******/ 		for(var i = 0; i < existingLinkTags.length; i++) {
+/******/ 			var tag = existingLinkTags[i];
+/******/ 			var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
+/******/ 			if(tag.rel === "stylesheet" && (dataHref === href || dataHref === fullhref)) return tag;
+/******/ 		}
+/******/ 		var existingStyleTags = document.getElementsByTagName("style");
+/******/ 		for(var i = 0; i < existingStyleTags.length; i++) {
+/******/ 			var tag = existingStyleTags[i];
+/******/ 			var dataHref = tag.getAttribute("data-href");
+/******/ 			if(dataHref === href || dataHref === fullhref) return tag;
+/******/ 		}
+/******/ 	};
+/******/ 	var loadStylesheet = (chunkId) => {
+/******/ 		return new Promise((resolve, reject) => {
+/******/ 			var href = __webpack_require__.miniCssF(chunkId);
+/******/ 			var fullhref = __webpack_require__.p + href;
+/******/ 			if(findStylesheet(href, fullhref)) return resolve();
+/******/ 			createStylesheet(chunkId, fullhref, resolve, reject);
+/******/ 		});
+/******/ 	}
+/******/ 	// object to store loaded CSS chunks
+/******/ 	var installedCssChunks = {
+/******/ 		"main": 0
+/******/ 	};
+/******/ 	
+/******/ 	__webpack_require__.f.miniCss = (chunkId, promises) => {
+/******/ 		var cssChunks = {"libs_shared-ui-components_src_index_ts-_ec531":1,"libs_shared-ui-components_src_index_ts-_ec530":1};
+/******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
+/******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
+/******/ 			promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
+/******/ 				installedCssChunks[chunkId] = 0;
+/******/ 			}, (e) => {
+/******/ 				delete installedCssChunks[chunkId];
+/******/ 				throw e;
+/******/ 			}));
+/******/ 		}
+/******/ 	};
+/******/ 	
+/******/ 	// no hmr
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/jsonp chunk loading */
 /******/ (() => {
 /******/ 	// no baseURI
@@ -430,7 +510,7 @@ Promise.all(/* import() */[__webpack_require__.e("vendors-node_modules_react_jsx
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if("webpack_sharing_consume_default_react_react" != chunkId) {
+/******/ 					if(!/^webpack_sharing_consume_default_(mfe\-rm\-nx_shared\-ui\-components_mfe\-rm\-nx_shared\-ui\-components\-1b5de6|react_react)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);

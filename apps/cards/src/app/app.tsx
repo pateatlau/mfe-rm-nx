@@ -1,12 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import { isEven } from '@mfe-rm-nx/utils';
+import { SmartCard } from '@mfe-rm-nx/shared-ui-components';
 
-import NxWelcome from './nx-welcome';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="cards" />
+      <h2>My Cards: Credit and Debit cards</h2>
+      <SmartCard type="Credit" />
+      <SmartCard type="Debit" />
+      <p>10 is an {isEven(10) ? 'even ' : 'odd '} number</p>
     </div>
   );
 }

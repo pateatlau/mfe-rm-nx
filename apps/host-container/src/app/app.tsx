@@ -1,8 +1,13 @@
-import * as React from 'react';
+import Casa from 'casa/Module';
+import Cards from 'cards/Module';
 
 export function App() {
   return (
-    <h1>Micro Frontend Host Container</h1>
+    <div style={ { fontFamily: 'Verdana, Geneva, Tahoma, sans-serif'} }>
+      <h1>Micro Frontend Host Container</h1>
+      <Casa />
+      <Cards />
+    </div>
   );
 }
 

@@ -13,6 +13,8 @@ mfe-rm-nx
   |   |-- shared-ui-components (React UI library)
   |   |-- utils (JS/TS utility library)
 ```
+## Installing NPM packages
+Navigate into the root repo folder (mfe-rm-nx) and run `npm i`. That's it -- no need to go all all the different sub-folders (projects) and install the packages separately. All the NPM packages are installed in the project root only.
 
 ## Start the app in local
 - To start the Cards Remote MFE development server run `nx serve cards`. Open your browser and navigate to http://localhost:4500/.

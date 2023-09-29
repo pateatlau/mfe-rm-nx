@@ -3,14 +3,14 @@
 Micro Frontend in React Monorepo using Nx Integrated-style repo.
 
 ## Main functional Repo structure (note each folder is a separate project)
-mfe-rm-nx
+`mfe-rm-nx
   |-- aps
   |   |-- cards (remote React MFE)
   |   |-- casa (remote React MFE)
   |   |-- host-container (host React MFE)
   |-- libs
   |   |-- shared-ui-components (React UI library)
-  |   |-- utils (JS/TS utility library)
+  |   |-- utils (JS/TS utility library)`
 
 ## Start the app in local
 - To start the Cards Remote MFE development server run `nx serve cards`. Open your browser and navigate to http://localhost:4500/.

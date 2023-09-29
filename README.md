@@ -53,4 +53,10 @@ Notes:
 ## Project dependency graph
 `nx dep-graph`. It will open the graph in the browser at http://127.0.0.1:4211/projects. Click at "Show all projects" in the left panel to view the graph.
 
+## References
+- Nx official website (https://nx.dev/)
+
+## Additional Reading
+- Micro Frontend Anarchy (https://www.thoughtworks.com/en-ca/radar/techniques/micro-frontend-anarchy)
+
 ## TBD: More details to be added.

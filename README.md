@@ -13,6 +13,10 @@ mfe-rm-nx
   |   |-- shared-ui-components (React UI library)
   |   |-- utils (JS/TS utility library)
 ```
+
+## Installing Nx Globally
+Run `npm i --global nx@latest`. It is recommended to install it globally as we can then directly run it directly, eg. `nx serve cards` instead of having to use NPX with every command if it is installed locally, eg. `npx nx serve cards`.
+
 ## Installing NPM packages
 Navigate into the root repo folder (mfe-rm-nx) and run `npm i`. That's it -- no need to go all the different sub-folders (projects) and install the packages separately. All the NPM packages are installed in the project root only. Once the NPM packages are installed, you are good to go!
 

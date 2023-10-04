@@ -1,3 +1,3 @@
-export function isEven(x: number): boolean {
-  return (x % 2) === 0;
-}
+const isEven = (x: number): boolean => x % 2 === 0;
+
+export { isEven };

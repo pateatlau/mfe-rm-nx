@@ -18,12 +18,12 @@ pipeline {
           steps {
             echo "Running npm ci..."
             sh "npm ci"
-            echo "npx nx affected --base=main --head=HEAD~1 -t lint --parallel=3"
-            sh "npx nx affected --base==main --head=HEAD~1 -t lint --parallel=3"
-            echo "npx nx affected --base==main --head=HEAD~1 -t test --parallel=3"
-            sh "npx nx affected --base==main --head=HEAD~1 -t test --parallel=3"
-            echo "npx nx affected --base==main --head=HEAD~1 -t build --parallel=3"
-            sh "npx nx affected --base==main --head=HEAD~1 -t build --parallel=3"
+            echo "npx nx affected -t lint --base=main --head=HEAD --parallel=3"
+            sh "npx nx affected -t lint --base=main --head=HEAD --parallel=3"
+            echo "npx nx affected -t test --base=main --head=HEAD --parallel=3"
+            sh "npx nx affected -t test --base=main --head=HEAD --parallel=3"
+            echo "npx nx affected -t build --base=main --head=HEAD --parallel=3"
+            sh "npx nx affected -t build --base=main --head=HEAD --parallel=3"
           }
         }
       }

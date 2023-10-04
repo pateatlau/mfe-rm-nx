@@ -1,1 +1,2 @@
-export declare function isEven(x: number): boolean;
+declare const isEven: (x: number) => boolean;
+export { isEven };

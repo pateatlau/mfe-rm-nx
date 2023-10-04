@@ -19,9 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   isEven: () => (/* binding */ isEven)
 /* harmony export */ });
-function isEven(x) {
-  return x % 2 === 0;
-}
+const isEven = x => x % 2 === 0;
+
 
 /***/ })
 

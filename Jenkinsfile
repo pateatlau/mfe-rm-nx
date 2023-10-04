@@ -18,8 +18,8 @@ pipeline {
           steps {
             echo "Running npm ci..."
             sh "npm ci"
-            echo "npx nx affected -t lint --base=main --head=HEAD --parallel=3"
-            sh "npx nx affected -t lint --base=main --head=HEAD --parallel=3"
+            echo "npx nx affected -t lint --base=main~1 --head=main --parallel=3"
+            sh "npx nx affected -t lint --base=main~1 --head=main --parallel=3"
             echo "npx nx affected -t test --base=main --head=HEAD --parallel=3"
             sh "npx nx affected -t test --base=main --head=HEAD --parallel=3"
             echo "npx nx affected -t build --base=main --head=HEAD --parallel=3"

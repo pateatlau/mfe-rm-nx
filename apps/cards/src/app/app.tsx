@@ -4,7 +4,7 @@ import { SmartCard } from '@mfe-rm-nx/shared-ui-components';
 export function App() {
   return (
     <div>
-      <h2>Cards: Credit and Debit cards</h2>
+      <h2>My : Credit and Debit cards</h2>
       <SmartCard type="Credit" />
       <SmartCard type="Debit" />
       <p>10 is an {isEven(10) ? 'even ' : 'odd '} number</p>

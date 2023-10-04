@@ -1,4 +1,5 @@
-#!pipeline {
+#!groovy
+pipeline {
   agent none
 
   environment {

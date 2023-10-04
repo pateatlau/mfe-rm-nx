@@ -22,7 +22,7 @@ pipeline {
             echo "git fetch..."
             sh "git fetch origin main:refs/remotes/origin/main"
             echo "npx nx affected test..."
-            sh "npx nx affected --target=test --base=origin/main"
+            sh "npx nx affected  --target=test  --base=HEAD~1"
           }
         }
       }

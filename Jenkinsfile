@@ -16,8 +16,8 @@ pipeline {
           agent any
           
           steps {
-            echo "Running npm ci..."
-            sh "npm ci"
+            echo "Running npm i..."
+            sh "npm i"
             echo "npx nx format:check"
             sh "npx nx format:check"
             echo "npx nx affected --base=HEAD~1 -t lint --parallel=3"

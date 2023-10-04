@@ -3,7 +3,8 @@ pipeline {
   agent none
 
   environment {
-    NX_BRANCH = env.BRANCH_NAME.replace('PR-', '')
+    NX_BRANCH = "main"
+    CHANGE_TARGET = "dev"
   }
   
   stages {

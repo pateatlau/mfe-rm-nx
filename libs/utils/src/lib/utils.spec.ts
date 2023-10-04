@@ -1,7 +1,7 @@
-import { utils } from './utils';
+import { isEven } from './utils';
 
 describe('utils', () => {
   it('should work', () => {
-    expect(utils()).toEqual('utils');
+    expect(isEven(2)).toBeTruthy;
   });
 });

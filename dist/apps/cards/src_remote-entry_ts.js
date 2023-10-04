@@ -23,30 +23,30 @@ function App() {
       children: "My Cards: Credit and Debit cards"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 7,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(_mfe_rm_nx_shared_ui_components__WEBPACK_IMPORTED_MODULE_1__.SmartCard, {
       type: "Credit"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 8,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(_mfe_rm_nx_shared_ui_components__WEBPACK_IMPORTED_MODULE_1__.SmartCard, {
       type: "Debit"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 9,
       columnNumber: 7
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("p", {
       children: ["10 is an ", (0,_mfe_rm_nx_utils__WEBPACK_IMPORTED_MODULE_0__.isEven)(10) ? 'even ' : 'odd ', " number"]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 10,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 7,
+    lineNumber: 6,
     columnNumber: 5
   }, this);
 }

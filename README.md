@@ -58,6 +58,23 @@ Notes:
 - Utils & shared-ui-components need not be built as they are libraries & not apps.
 - shared-ui-components use `vite` as build tool, instead of `webpack`.
 
+## Run-many
+
+- `nx run-many -t lint`: Run all lints
+- `nx run-many -t test`: Run all tests
+- `nx run-many -t build`: Run all builds
+- `nx run-many -t test -p proj1 proj2`: Test proj1 and proj2
+- `nx run-many -t test -p proj1 proj2 --parallel=5`: Test proj1 and proj2 in parallel of 5 tasks
+- `nx run-many -t test -p proj1 proj2 --parallel=false`: Tet proj1 and proj2 in sequence
+
+## Affected
+
+- `nx affected -t test`: Run tests on all affected projects
+- `nx affected -t lint test build`: Run lints, tests and builds on all affected projects
+- `nx affected  --target=lint  --base=HEAD~1`: Run lints on all projects that were affected by last commit.
+- `nx affected  --target=test  --base=HEAD~1`: Run tests on all projects that were affected by last commit.
+- `nx affected  --target=build  --base=HEAD~1`: Run builds on all projects that were affected by last commit.
+
 ## Project dependency graph
 
 - `nx graph`: It will open the graph in the browser at http://127.0.0.1:4211/projects. Click at "Show all projects" in the left panel to view the graph.

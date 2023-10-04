@@ -11,10 +11,6 @@ pipeline {
     stage('Pipeline') {
       parallel {
         stage('Main') {
-          when {
-            branch 'main'
-          }
-
           agent any
           
           steps {

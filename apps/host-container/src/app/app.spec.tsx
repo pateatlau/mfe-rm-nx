@@ -20,6 +20,6 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
-    expect(getByText(/Welcome host-container/gi)).toBeTruthy();
+    expect(getByText(/Micro Frontend Host Container/gi)).toBeTruthy();
   });
 });

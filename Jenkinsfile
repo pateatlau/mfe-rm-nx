@@ -7,6 +7,8 @@ pipeline {
     CHANGE_TARGET = "dev"
   }
   
+  tools {nodejs "NodeJS"}
+
   stages {
     stage('Pipeline') {
       parallel {

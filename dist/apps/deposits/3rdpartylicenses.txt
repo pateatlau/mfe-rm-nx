@@ -1,6 +1,8 @@
 @mfe-rm-nx/source
 MIT
 
+@mfe-rm-nx/utils
+
 react
 MIT
 MIT License

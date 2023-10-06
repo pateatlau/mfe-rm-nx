@@ -1,1 +1,0 @@
-(self.webpackChunkdeposits=self.webpackChunkdeposits||[]).push([[283],{283:(e,s,p)=>{p.r(s),p.d(s,{default:()=>a.Z});var a=p(504)}}]);

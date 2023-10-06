@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/host-container/src",
   "projectType": "application",
-  "implicitDependencies": ["casa", "cards", "loans-angular"],
+  "implicitDependencies": ["casa", "cards", "loans-angular", "deposits"],
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",

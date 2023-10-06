@@ -1,12 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { isOdd } from '@mfe-rm-nx/utils';
 
 export function App() {
+  const one = 1;
+
   return (
     <div>
-      <NxWelcome title="deposits" />
+      <h2>Deposits at highest interest rates!</h2>
+      <p>
+        {one} is an {isOdd(one) ? 'even ' : 'odd '} number
+      </p>
     </div>
   );
 }

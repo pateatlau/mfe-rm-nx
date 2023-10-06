@@ -4,7 +4,7 @@ export function App() {
   return (
     <div>
       <h2>CASA: Current Accounts & Saving Accounts</h2>
-      <p>11 is an {isEven(10) ? 'even ' : 'odd '} number</p>
+      <p>11 is an {isEven(11) ? 'even ' : 'odd '} number</p>
     </div>
   );
 }

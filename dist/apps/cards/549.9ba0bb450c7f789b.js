@@ -1,0 +1,1 @@
+(self.webpackChunkcards=self.webpackChunkcards||[]).push([[549],{549:(r,a,e)=>{e.r(a),e.d(a,{SmartCard:()=>s});const c={container:"smart-card_container__SWEqX"};var n=e(322);function s(r){return(0,n.jsxs)("div",{className:c.container,style:{backgroundColor:"Credit"===r.type?"gold":"black"},children:["Awesome ",r.type," card"]})}}}]);

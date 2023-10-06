@@ -1,0 +1,1 @@
+(self.webpackChunkcasa=self.webpackChunkcasa||[]).push([[434],{434:(s,a,c)=>{c.r(a),c.d(a,{isEven:()=>e,isOdd:()=>k});const e=s=>s%2==0,k=s=>!e(s)}}]);

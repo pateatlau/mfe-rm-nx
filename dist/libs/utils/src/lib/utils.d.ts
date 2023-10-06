@@ -1,2 +1,3 @@
 declare const isEven: (x: number) => boolean;
-export { isEven };
+declare const isOdd: (x: number) => boolean;
+export { isEven, isOdd };

@@ -2130,11 +2130,18 @@ const zt = "_container_renil_1", qt = {
   container: zt
 };
 function Ht(z) {
-  return /* @__PURE__ */ Bt.jsxs("div", { className: qt.container, style: { backgroundColor: z.type === "Credit" ? "gold" : "black" }, children: [
-    "My awesome ",
-    z.type,
-    " card"
-  ] });
+  return /* @__PURE__ */ Bt.jsxs(
+    "div",
+    {
+      className: qt.container,
+      style: { backgroundColor: z.type === "Credit" ? "gold" : "black" },
+      children: [
+        "Awesome ",
+        z.type,
+        " card"
+      ]
+    }
+  );
 }
 export {
   Ht as SmartCard

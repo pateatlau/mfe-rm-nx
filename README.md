@@ -6,7 +6,7 @@ Micro Frontend in React Monorepo using Nx Integrated-style repo.
 
 ```
 mfe-rm-nx
-  |-- aps
+  |-- apps
   |   |-- deposits (remote React MFE)
   |   |-- cards (remote React MFE)
   |   |-- casa (remote React MFE)

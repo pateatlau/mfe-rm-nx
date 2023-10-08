@@ -1,1 +1,0 @@
-(self.webpackChunkdeposits=self.webpackChunkdeposits||[]).push([[434],{434:(s,e,d)=>{d.r(e),d.d(e,{isEven:()=>p,isOdd:()=>i});const p=s=>s%2==0,i=s=>!p(s)}}]);

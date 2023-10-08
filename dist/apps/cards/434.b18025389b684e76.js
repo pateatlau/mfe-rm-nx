@@ -1,1 +1,0 @@
-(self.webpackChunkcards=self.webpackChunkcards||[]).push([[434],{434:(s,c,d)=>{d.r(c),d.d(c,{isEven:()=>e,isOdd:()=>a});const e=s=>s%2==0,a=s=>!e(s)}}]);

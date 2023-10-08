@@ -10,7 +10,7 @@ mfe-rm-nx
   |   |-- deposits (remote React MFE)
   |   |-- cards (remote React MFE)
   |   |-- casa (remote React MFE)
-  |   |-- loans (remote React MFE)
+  |   |-- loans-angular (remote Angular MFE)
   |   |-- host (host React MFE)
   |-- libs
   |   |-- shared-ui (React UI component library)

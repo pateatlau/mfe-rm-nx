@@ -7,11 +7,13 @@ Micro Frontend in React Monorepo using Nx Integrated-style repo.
 ```
 mfe-rm-nx
   |-- aps
+  |   |-- deposits (remote React MFE)
   |   |-- cards (remote React MFE)
   |   |-- casa (remote React MFE)
-  |   |-- host-container (host React MFE)
+  |   |-- loans (remote React MFE)
+  |   |-- host (host React MFE)
   |-- libs
-  |   |-- shared-ui-components (React UI library)
+  |   |-- shared-ui (React UI component library)
   |   |-- utils (JS/TS utility library)
 ```
 

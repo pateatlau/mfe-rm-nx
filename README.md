@@ -27,47 +27,54 @@ Navigate to the root repo folder (mfe-rm-nx) and run `npm i`. That's it! No need
 
 ## Start the app in local
 
+- To start the Deposits Remote MFE development server run `nx serve deposits`. Open your browser and navigate to http://localhost:4800/.
 - To start the Cards Remote MFE development server run `nx serve cards`. Open your browser and navigate to http://localhost:4500/.
 - To start the Casa Remote MFE development server run `nx serve casa`. Open your browser and navigate to http://localhost:4600/.
-- To start the Host Container MFE development server with hot reload, run `nx serve host-container devRemotes=cards, casa`. Open your browser and navigate to http://localhost:4300/. (NOTE: `nx serve host-container` runs without hot reload when changes are made to the remote MFE's)
+- To start the Loans Remote MFE development server run `nx serve loans-angular`. Open your browser and navigate to http://localhost:4700/.
+- To start the Host Container MFE development server with hot reload, run `nx serve host devRemotes=deposits, cards, casa` (loans-angular is temporarily not linked with the host container). Open your browser and navigate to http://localhost:4300/. (NOTE: `nx serve host` runs without hot reload when changes are made to the remote MFE's)
 
 ## Linting
 
+- To lint Deposits : `nx lint deposits`
 - To lint Cards: `nx lint cards`
 - To lint Casa: `nx lint casa`
 - To lint Host Container: `nx lint host-container`
 - To lint Utils: `nx lint utils`
-- To lint shared-ui-components: `nx lint shared-ui-components`
+- To lint shared-ui-components: `nx lint shared-ui`
 
 ## Unit Testing
 
+- To run unit test for Deposits : `nx test deposits`
 - To run unit test for Cards: `nx test cards`
 - To run unit test for Casa: `nx test casa`
-- To run unit test for Host Container: `nx test host-container`
+- To run unit test for Loans: `nx test loans-angular`
+- To run unit test for Host: `nx test host`
 - To run unit test for Utils: `nx test utils`
-- To run unit test for shared-ui-components: `nx test shared-ui-components`
+- To run unit test for shared-ui-components: `nx test shared-ui`
 
 ## Build for production deploy
 
+- To build Deposits : `nx build deposits`
 - To build Cards: `nx build cards`. It will generate output in dist/apps/cards.
 - To build Casa: `nx build casa`. It will generate output in dist/apps/casa.
-- To build Host Container: `nx build host-container`. It will generate output in dist/apps/host-container.
+- To build Loans: `nx build loans-angular`. It will generate output in dist/apps/loans-angular.
+- To build Host Container: `nx build host`. It will generate output in dist/apps/host.
 - To build utils: `nx build utils`. It will generate output in dist/libs/utils.
-- To build shared-ui-components: `nx build shared-ui-components`. It will generate output in dist/libs/shared-ui-components.
+- To build shared-ui: `nx build shared-ui`. It will generate output in dist/libs/shared-ui.
 
 Notes:
 
-- Utils & shared-ui-components need not be built as they are libraries & not apps.
-- shared-ui-components use `vite` as build tool, instead of `webpack`.
+- Utils & shared-ui need not be built as they are libraries & not apps.
+- shared-ui use `vite` as build tool, instead of `webpack`.
 
 ## Run-many
 
 - `nx run-many -t lint`: Run all lints
 - `nx run-many -t test`: Run all tests
 - `nx run-many -t build`: Run all builds
-- `nx run-many -t test -p proj1 proj2`: Test proj1 and proj2
-- `nx run-many -t test -p proj1 proj2 --parallel=5`: Test proj1 and proj2 in parallel of 5 tasks
-- `nx run-many -t test -p proj1 proj2 --parallel=false`: Tet proj1 and proj2 in sequence
+- `nx run-many -t test -p cards casa`: Test cards and casa
+- `nx run-many -t test -p cards casa --parallel=5`: Test cards and casa in parallel of 5 tasks
+- `nx run-many -t test -p cards casa --parallel=false`: Test cards and casa in sequence
 
 ## Affected
 
@@ -85,6 +92,7 @@ Notes:
 ## References
 
 - Nx official website (https://nx.dev/)
+- Nx official documentation (https://nx.dev/getting-started/intro). There's a ton of links in this page, just click at the relevant link / section in left panel.
 
 ## Additional Reading
 

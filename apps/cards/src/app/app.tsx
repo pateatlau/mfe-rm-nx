@@ -1,5 +1,5 @@
 import { isEven } from '@mfe-rm-nx/utils';
-import { SmartCard } from '@mfe-rm-nx/shared-ui-components';
+import { SmartCard } from '@mfe-rm-nx/shared-ui';
 
 export function App() {
   return (

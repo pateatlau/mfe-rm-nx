@@ -1,7 +1,7 @@
 {
-  "name": "host-container",
+  "name": "host",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/host-container/src",
+  "sourceRoot": "apps/host/src",
   "projectType": "application",
   "implicitDependencies": ["casa", "cards", "loans-angular", "deposits"],
   "targets": {
@@ -11,19 +11,16 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/host-container",
-        "index": "apps/host-container/src/index.html",
+        "outputPath": "dist/apps/host",
+        "index": "apps/host/src/index.html",
         "baseHref": "/",
-        "main": "apps/host-container/src/main.ts",
-        "tsConfig": "apps/host-container/tsconfig.app.json",
-        "assets": [
-          "apps/host-container/src/favicon.ico",
-          "apps/host-container/src/assets"
-        ],
-        "styles": ["apps/host-container/src/styles.css"],
+        "main": "apps/host/src/main.ts",
+        "tsConfig": "apps/host/tsconfig.app.json",
+        "assets": ["apps/host/src/favicon.ico", "apps/host/src/assets"],
+        "styles": ["apps/host/src/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
-        "webpackConfig": "apps/host-container/webpack.config.ts"
+        "webpackConfig": "apps/host/webpack.config.ts"
       },
       "configurations": {
         "development": {
@@ -35,8 +32,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/host-container/src/environments/environment.ts",
-              "with": "apps/host-container/src/environments/environment.prod.ts"
+              "replace": "apps/host/src/environments/environment.ts",
+              "with": "apps/host/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -45,7 +42,7 @@
           "namedChunks": false,
           "extractLicenses": true,
           "vendorChunk": false,
-          "webpackConfig": "apps/host-container/webpack.config.prod.ts"
+          "webpackConfig": "apps/host/webpack.config.prod.ts"
         }
       }
     },
@@ -53,16 +50,16 @@
       "executor": "@nx/react:module-federation-dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "host-container:build",
+        "buildTarget": "host:build",
         "hmr": true,
         "port": 4300
       },
       "configurations": {
         "development": {
-          "buildTarget": "host-container:build:development"
+          "buildTarget": "host:build:development"
         },
         "production": {
-          "buildTarget": "host-container:build:production",
+          "buildTarget": "host:build:production",
           "hmr": false
         }
       }
@@ -71,14 +68,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/host-container/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/host/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/host-container/jest.config.ts",
+        "jestConfig": "apps/host/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -92,16 +89,16 @@
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "host-container:build",
+        "buildTarget": "host:build",
         "watch": false,
         "port": 4300
       },
       "configurations": {
         "development": {
-          "buildTarget": "host-container:build:development"
+          "buildTarget": "host:build:development"
         },
         "production": {
-          "buildTarget": "host-container:build:production"
+          "buildTarget": "host:build:production"
         }
       }
     }

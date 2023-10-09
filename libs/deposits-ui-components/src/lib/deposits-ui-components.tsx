@@ -15,7 +15,7 @@ export function DepositsComponent(props: DepositsComponentProps) {
       style={{
         width: '50%',
         border: 'blue 1px solid',
-        background: '#003',
+        background: '#1a0dab',
         color: 'white',
         padding: '15px',
         fontFamily: 'verdana',

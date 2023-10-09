@@ -1,6 +1,6 @@
 import Casa from 'casa/Module';
 import Cards from 'cards/Module';
-import Deposits from 'cards/Module';
+import Deposits from 'deposits/Module';
 
 export function App() {
   return (

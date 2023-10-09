@@ -6,6 +6,7 @@ export interface DepositsUiComponentsProps {}
 /* eslint-disable-next-line */
 export interface DepositsComponentProps {
   type: string;
+  interestRate: number;
 }
 
 export function DepositsComponent(props: DepositsComponentProps) {
@@ -20,7 +21,9 @@ export function DepositsComponent(props: DepositsComponentProps) {
         fontFamily: 'verdana',
       }}
     >
-      <h2>{props.type} Deposits</h2>
+      <h3>
+        {props.type} Deposits (Interest rate: {props.interestRate}%)
+      </h3>
     </div>
   );
 }

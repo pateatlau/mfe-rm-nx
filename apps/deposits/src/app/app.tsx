@@ -8,8 +8,9 @@ export function App() {
     <>
       <div>
         <h2>Deposits at highest interest rates!</h2>
-        <DepositsComponent type="Fixed" />
-        <DepositsComponent type="Recurring" />
+        <DepositsComponent type="Fixed" interestRate={7.5} />
+        <DepositsComponent type="Recurring" interestRate={6.75} />
+        <DepositsComponent type="Term" interestRate={8} />
       </div>
       <p>{`${one} is an ` + isOdd(one) ? 'odd number' : 'even number'}</p>
     </>

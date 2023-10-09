@@ -13,11 +13,11 @@ export function CasaUiComponents(props: CasaUiComponentsProps) {
 }
 
 /* eslint-disable-next-line */
-export interface FooComponentProps {
+export interface CasaComponentProps {
   title: string;
 }
 
-export function FooComponent(props: FooComponentProps) {
+export function CasaComponent(props: CasaComponentProps) {
   return (
     <>
       <div

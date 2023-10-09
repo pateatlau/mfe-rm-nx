@@ -19,6 +19,9 @@
         "libs/cards-ui-components/src/index.ts"
       ],
       "@mfe-rm-nx/casa-ui-components": ["libs/casa-ui-components/src/index.ts"],
+      "@mfe-rm-nx/deposits-ui-components": [
+        "libs/deposits-ui-components/src/index.ts"
+      ],
       "@mfe-rm-nx/shared-ui": ["libs/shared-ui/src/index.ts"],
       "@mfe-rm-nx/utils": ["libs/utils/src/index.ts"]
     }

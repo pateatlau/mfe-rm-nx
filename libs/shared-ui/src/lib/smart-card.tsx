@@ -9,7 +9,14 @@ export function SmartCard(props: SmartCardProps) {
   return (
     <div
       className={styles['container']}
-      style={{ backgroundColor: props.type === 'Credit' ? 'gold' : 'black' }}
+      style={{
+        backgroundColor:
+          props.type === 'Credit'
+            ? 'gold'
+            : props.type === 'Debit'
+            ? 'black'
+            : 'red',
+      }}
     >
       Awesome {props.type} card
     </div>

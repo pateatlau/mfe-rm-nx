@@ -1,5 +1,6 @@
 import styles from './cards-ui-components.module.css';
 import { SmartCard } from '@mfe-rm-nx/shared-ui';
+
 /* eslint-disable-next-line */
 export interface CardsUiComponentsProps {}
 
@@ -11,7 +12,7 @@ export function CardsUiComponents(props: CardsUiComponentsProps) {
   );
 }
 
-export function SmartCardsCollection(props: CardsUiComponentsProps) {
+export function SmartCards(props: CardsUiComponentsProps) {
   return (
     <div>
       <SmartCard type="Credit" />

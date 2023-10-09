@@ -7,7 +7,7 @@ export function App() {
     <div>
       <h2>Deposits at highest interest rates!</h2>
       <p>
-        {one} is an {isOdd(one) ? 'even ' : 'odd '} number
+        {one} is an {isOdd(one) ? 'odd ' : 'even '} number
       </p>
     </div>
   );

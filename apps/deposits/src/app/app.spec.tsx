@@ -10,6 +10,6 @@ describe('App', () => {
 
   it('should have a greeting as the title', () => {
     const { getByText } = render(<App />);
-    expect(getByText(/deposits/gi)).toBeTruthy();
+    expect(getByText(/Deposits at highest interest rates!/i)).toBeTruthy();
   });
 });

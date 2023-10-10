@@ -1,5 +1,5 @@
 import styles from './casa-ui-components.module.css';
-import { SmartCard } from '@mfe-rm-nx/shared-ui';
+import { ApplyNow, SmartCard } from '@mfe-rm-nx/shared-ui';
 
 /* eslint-disable-next-line */
 export interface CasaUiComponentsProps {}
@@ -33,6 +33,7 @@ export function CasaComponent(props: CasaComponentProps) {
         <h2>{props.title}</h2>
       </div>
       <SmartCard type="Unknown" />
+      <ApplyNow />
     </>
   );
 }

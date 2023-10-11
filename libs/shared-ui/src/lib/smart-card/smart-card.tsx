@@ -15,7 +15,7 @@ export function SmartCard(props: SmartCardProps) {
             ? 'gold'
             : props.type === 'Debit'
             ? 'black'
-            : 'red',
+            : 'gold',
       }}
     >
       Awesome {props.type} card

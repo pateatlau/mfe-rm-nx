@@ -1,0 +1,52 @@
+{
+  "name": "react-native-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react-native-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react-native-lib",
+        "tsConfig": "libs/react-native-lib/tsconfig.lib.json",
+        "project": "libs/react-native-lib/package.json",
+        "entryFile": "libs/react-native-lib/src/index.ts",
+        "external": ["react/jsx-runtime", "react-native", "react", "react-dom"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/react-native-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react-native-lib/**/*.{ts,tsx,js,jsx}",
+          "libs/react-native-lib/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/react-native-lib/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  }
+}

@@ -22,6 +22,7 @@
       "@mfe-rm-nx/deposits-ui-components": [
         "libs/deposits-ui-components/src/index.ts"
       ],
+      "@mfe-rm-nx/react-native-lib": ["libs/react-native-lib/src/index.ts"],
       "@mfe-rm-nx/shared-ui": ["libs/shared-ui/src/index.ts"],
       "@mfe-rm-nx/utils": ["libs/utils/src/index.ts"]
     }
